@@ -51,15 +51,7 @@ Dedicated scheme for running unit tests:
   - Build Configuration: Debug
   - Test Coverage: Enabled
   - Parallel Testing: Enabled
-  - Environment Variables:
-    ```
-    IS_UNIT_TESTING=YES
-    MOCK_NETWORK_ENABLED=YES
-    ```
-  - Launch Arguments:
-    ```
-    -unittest YES
-    ```
+
 - **Included Tests**:
   - ViewModel tests
   - Model tests
@@ -104,9 +96,7 @@ Separate scheme for UI testing:
    - Enable code coverage
    - Check "Randomize execution order"
    - Set "Test Execution" to "Parallel"
-6. Under Arguments:
-   - Add the environment variables listed above
-   - Add the launch arguments listed above
+
 
 #### Setting Up UI Test Scheme
 1. In Xcode, go to Product > Scheme > Edit Scheme
@@ -116,9 +106,6 @@ Separate scheme for UI testing:
 5. Under Options:
    - Enable "Gather system trace data"
    - Set "Test Execution" to "Serial"
-6. Under Arguments:
-   - Add the environment variables listed above
-   - Add the launch arguments listed above
 
 ### Test Categories and Organization
 
@@ -131,7 +118,6 @@ Separate scheme for UI testing:
 - **Error Scenarios**
   - Network errors
   - Invalid data handling
-  - Timeout handling
 - **State Management**
   - Loading state transitions
   - Error message updates
@@ -184,21 +170,6 @@ xcodebuild test -scheme ANZ_AssesmentTests -destination 'platform=iOS Simulator,
 # UI Tests
 xcodebuild test -scheme ANZ_AssesmentUITests -destination 'platform=iOS Simulator,name=iPhone 15,OS=17.0'
 ```
-
-#### CI/CD Integration
-The separate schemes enable efficient CI/CD workflows:
-1. **Fast Feedback Loop**:
-   - Unit tests run on every pull request
-   - Quick validation of business logic changes
-
-2. **UI Test Strategy**:
-   - UI tests run on specific branches only
-   - Scheduled nightly runs
-   - Pre-release validation
-
-3. **Parallel Execution**:
-   - Unit and UI tests can run simultaneously
-   - Faster overall build times
 
 #### Test Configurations
 1. **Unit Tests Scheme**
