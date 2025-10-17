@@ -1,0 +1,38 @@
+{
+  "configurations" : [
+    {
+      "id" : "D585B523-873E-43AA-8DA1-3E4DBF909D54",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:ANZ_Assesment.xcodeproj",
+      "identifier" : "7AEDC9BC2EA134F800EEA5CE",
+      "name" : "ANZ_Assesment"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:ANZ_Assesment.xcodeproj",
+        "identifier" : "7AEDC9C92EA134FB00EEA5CE",
+        "name" : "ANZ_AssesmentTests"
+      }
+    },
+    {
+      "enabled" : false,
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:ANZ_Assesment.xcodeproj",
+        "identifier" : "7AEDC9D32EA134FB00EEA5CE",
+        "name" : "ANZ_AssesmentUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
