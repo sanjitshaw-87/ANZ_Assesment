@@ -2,14 +2,14 @@ import XCTest
 @testable import ANZ_Assesment
 
 @MainActor
-final class ItemsViewModelTests: XCTestCase {
-    var viewModel: ItemsViewModel!
+final class UsersViewModelTests: XCTestCase {
+    var viewModel: UsersViewModel!
     var mockNetworkService: MockNetworkService!
     
     override func setUp() {
         super.setUp()
         mockNetworkService = MockNetworkService()
-        viewModel = ItemsViewModel(networkService: mockNetworkService)
+        viewModel = UsersViewModel(networkService: mockNetworkService)
     }
     
     override func tearDown() {

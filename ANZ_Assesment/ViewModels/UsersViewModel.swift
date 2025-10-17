@@ -1,6 +1,6 @@
 import Foundation
 @MainActor
-final class ItemsViewModel: ObservableObject {
+final class UsersViewModel: ObservableObject {
     @Published private(set) var users: [User] = []
     @Published private(set) var isLoading = false
     @Published private(set) var errorMessage: String?
